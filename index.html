@@ -8,31 +8,43 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    
+
     <div class='alert-box' id='alert-box'>
-        <p> Alert box </p> 
-            <button onclick="알림창스위치('none')">알림창 끄기</button>
+    <p> Alert box</p>
     </div>
 
-             <button onclick="알림창스위치('block')">알림창 켜기</button>
+
+    <button onclick="버튼열기('아이디를 입력하시오')">버튼1</button>
+    <button onclick= "버튼열기('비밀번호를 입력하시오')">버튼2</button>
+
+
 
 
     <script>
 
-        // 파라미터: 함수하나로 다양한 기능 만들기-> 파라미터로 코드 양 줄어듦
-        // // function 알림창스위치(아무거나){
-        // //     document.getElementById('alert-box').style.display=아무거나;
+        // function 버튼1열기(){
+        //     document.getElementById('alert-box').style.display='block';
+        //     document.getElementById('alert-box').innerHTML='아이디를 입력하시오';
+
+
         // }
-    
-        function 알림창스위치(onoff){
-            document.getElementById('alert-box').style.display=onoff;
+
+        // function 버튼2()열기{
+        //     document.getElementById('alert-box').style.display='block';
+        //     document.getElementById('alert-box').innerHTML='비밀번호를 입력하시오';
+        // }
+
+        
+        // 파라미터를 이용한다면??
+
+        function 버튼열기(아무거나) {
+            document.getElementById('alert-box').style.display='block';
+            document.getElementById('alert-box').innerHTML=아무거나;
         }
 
-        // 여기서 onoff가 파라미터
 
-        // // function 알림창스위치(파라미터1,파라미터2){
-        //     document.getElementById(파라미터1).style.display=파라미터2;    
-        // } 이렇게 여러 개 쓰기도 함.
+
+
 
     </script>
 
