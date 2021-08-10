@@ -11,26 +11,29 @@
     
     <div class='alert-box' id='alert-box'>
         <p> Alert box </p> 
-            <button onclick="알림창끄기()">알림창 끄기</button>
+            <button onclick="알림창스위치('none')">알림창 끄기</button>
     </div>
 
-             <button onclick="알림창켜기()">알림창 켜기</button>
+             <button onclick="알림창스위치('block')">알림창 켜기</button>
 
 
     <script>
 
-        // function 함수의이름을지어라(){축약하고 싶은 함수를 쓰시오}
-        // 함수의이름을지어라() 세트세트*
-
-
+        // 파라미터: 함수하나로 다양한 기능 만들기-> 파라미터로 코드 양 줄어듦
+        // // function 알림창스위치(아무거나){
+        // //     document.getElementById('alert-box').style.display=아무거나;
+        // }
     
-        function 알림창켜기(){
-            document.getElementById('alert-box').style.display='block';
+        function 알림창스위치(onoff){
+            document.getElementById('alert-box').style.display=onoff;
         }
 
-        function 알림창끄기(){
-            document.getElementById('alert-box').style.display='none';
-        }
+        // 여기서 onoff가 파라미터
+
+        // // function 알림창스위치(파라미터1,파라미터2){
+        //     document.getElementById(파라미터1).style.display=파라미터2;    
+        // } 이렇게 여러 개 쓰기도 함.
+
     </script>
 
 </body>
