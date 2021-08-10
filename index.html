@@ -8,18 +8,17 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-
-    <h2 id="hello">안녕하세요</h2>
+    <!-- id 없을때는 id 만들어주기 -->
+    <div class="alert-box" id="alert-box">Alert box</div>
+    <button onclick="document.getElementById('alert-box').style.display='block'">알림창 켜기</button>
+    <button onclick="document.getElementById('alert-box').style.display='none'">알림창 끄기</button>
     
-    
-    <script>
-    document.getElementById('hello').innerHTML='안녕'   
 
-        
-     </script>
+
+
 
 
 
 
 </body>
-</html>   
+</html>
