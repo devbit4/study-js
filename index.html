@@ -8,17 +8,30 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <!-- id 없을때는 id 만들어주기 -->
-    <div class="alert-box" id="alert-box">Alert box</div>
-    <button onclick="document.getElementById('alert-box').style.display='block'">알림창 켜기</button>
-    <button onclick="document.getElementById('alert-box').style.display='none'">알림창 끄기</button>
     
+    <div class='alert-box' id='alert-box'>
+        <p> Alert box </p> 
+            <button onclick="알림창끄기()">알림창 끄기</button>
+    </div>
+
+             <button onclick="알림창켜기()">알림창 켜기</button>
 
 
+    <script>
+
+        // function 함수의이름을지어라(){축약하고 싶은 함수를 쓰시오}
+        // 함수의이름을지어라() 세트세트*
 
 
+    
+        function 알림창켜기(){
+            document.getElementById('alert-box').style.display='block';
+        }
 
-
+        function 알림창끄기(){
+            document.getElementById('alert-box').style.display='none';
+        }
+    </script>
 
 </body>
 </html>
