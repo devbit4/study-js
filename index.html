@@ -3,50 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='main.css'>
     <title>Document</title>
-    <link rel="stylesheet" href="main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
-<body>
+<body>    
 
-    <div class='alert-box' id='alert-box'>
-    <p> Alert box</p>
-    </div>
-
-
-    <button onclick="버튼열기('아이디를 입력하시오')">버튼1</button>
-    <button onclick= "버튼열기('비밀번호를 입력하시오')">버튼2</button>
-
-
-
-
+    <h4 id="test" style='color:red'>안녕하세요</h4>
+   
     <script>
+    // document.getElementById('test').innerHTML = '안녕';
+    $('#test').html('안녕');
+    $('#test').css('color', 'blue');
+    $('#test').attr('src','dfa;fe');
+    
+    $('#test').addClass('yellow-bg');
+    
 
-        // function 버튼1열기(){
-        //     document.getElementById('alert-box').style.display='block';
-        //     document.getElementById('alert-box').innerHTML='아이디를 입력하시오';
-
-
-        // }
-
-        // function 버튼2()열기{
-        //     document.getElementById('alert-box').style.display='block';
-        //     document.getElementById('alert-box').innerHTML='비밀번호를 입력하시오';
-        // }
-
-        
-        // 파라미터를 이용한다면??
-
-        function 버튼열기(아무거나) {
-            document.getElementById('alert-box').style.display='block';
-            document.getElementById('alert-box').innerHTML=아무거나;
-        }
-
-
-
-
-
+    // 제이쿼리$('CSS컬렉터')
+    
     </script>
+    
+    
 
 </body>
 </html>
