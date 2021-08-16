@@ -23,7 +23,8 @@
      z-index: 5;
      width: 100%;
      height: 100%;
-     display: none;
+     display: block;
+     margin-top: -1000px;
 
  }
 
@@ -35,7 +36,24 @@
      border-radius: 15px;
  }
 
- .btn{
-     margin: 10px;
- }
 
+ .close {
+     background-color: #f44336;
+    }
+
+.confirm, .pconfirm {
+    display: none;
+}
+
+.jumbotron {
+    padding: 20px;
+}
+
+.left-menu {
+    width: 150px;
+    height: 100%;
+    background: black;    
+    color: white;
+    position: fixed;
+    margin-left: -150px;
+}

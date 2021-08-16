@@ -15,15 +15,36 @@
 
   </head>
   <body>
+    
+    <div class="left-menu">
+        Menu
+    </div>
+
+
+
         <div class="black-background">
             <div class="white-background">
                 <P>로그인하십시오</P>
-                <button class="close">close</button>
+                <form action="login.php">
+                    <div class="form-group">
+                      <input type="email" class="form-control email" placeholder="Email" id="email">
+                      <p class="confirm">이메일을 다시 입력해 주십시오</p>
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control password" placeholder="Password">
+                      <p class="pconfirm">비밀번호를 다시 입력해 주십시오</p>
+                    </div>
+                    <button type="submit" class="btn btn-primary">전송</button>
+                    <button type="close" class="btn btn-danger close">닫기</button>
+                </form>
+              
             </div>
          </div>
 
+
+
          <div class="nav-menu">
-            <h4 style="margin: 0"><strong>Designer Studio</strong></h4>
+            <h4 style="margin: 0"><strong>Design Studio</strong></h4>
             <a class="nav-sub-button">Styles</a>
         </div>
 
@@ -34,54 +55,60 @@
             <li class="list-group-item">shoes</li>
           </ul>
 
-          <script>
-              $('.nav-sub-button').on('click', function(){
-                  $('.nav-sub').slideToggle();
-              });
 
-            //   $('.nav-sub-button').click(function(){
-            //       $('.nav-sub').slideToggle();
-            //   });
-          </script>
-
-        <div class="jumbotron main-background">
-        <h1 class="display-4">Designer studio</h1>
+      <div class="jumbotron main-background">
+        <h1 class="display-4">Design studio</h1>
         <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
         <hr class="my-4">
         <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <p class="lead">
-          <a class="btn btn-primary login btn-lg" href="#" role="button">Log In</a>
-        </p>
+        <a class="btn btn-primary login btn-lg" href="#" role="button">Log In</a>
+        <a class="btn btn-danger show-menu btn-lg" href="#" role="button">show menu</a>
       </div>
 
 
-        <input id="test-input">
+
 
 
         <script>
+            // // 폼이 전송될 때
+            // //     만약에 이메일 input에 입력된 값이 빈칸인 경우. 
+            // //     폼의 전송을 막음, 안내문 띄움
+            $('form').on('submit',function(e){
+                if($('.email').val() == '') {
+                    e.preventDefault(); 
+                    $('.confirm').show();
+                } else if($('.password').val() == '') {
+                    e.preventDefault(); 
+                    $('.pconfirm').show();
+                }
+            })
+
+
+            $('.nav-sub-button').on('click', function(){
+                  $('.nav-sub').slideToggle();
+              });
+
 
             $('.login').on('click', function(){
-                if($('#test-input').val()=='안녕'){
-               $('.black-background').show();
-            } 
+               $('.black-background').animate({marginTop:'0px'});
             });
             
          
 
             $('.close').on('click', function(){
                $('.black-background').hide(); 
+            });
+
+            $('.show-menu').click(function(){
+                $('.left-menu').show();
+                $('.left-menu').animate({marginLeft:'0px'});
             })
 
+           
           
 
 
         </script>
-
-        <!-- <script>
-            $('.btn').on('click', function(){
-            $('.black-background').css('display','block'); 
-            })
-        </script> -->
 
     <!-- Optional JavaScript; choose one of the two! -->
 
