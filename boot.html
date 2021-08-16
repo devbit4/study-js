@@ -90,8 +90,10 @@
 
 
             $('.login').on('click', function(){
-               $('.black-background').animate({marginTop:'0px'});
+               $('.black-background').css('transform','translateY(0px)');
             });
+
+
             
          
 
@@ -100,7 +102,6 @@
             });
 
             $('.show-menu').click(function(){
-                $('.left-menu').show();
                 $('.left-menu').animate({marginLeft:'0px'});
             })
 
