@@ -59,3 +59,27 @@
     position: fixed;
     margin-left: -150px;
 }
+
+
+.slide-container{
+    width: 300vw;
+    transition: transform 1s;
+}
+
+.slide-box{
+    width: 100vw;
+    float: left;
+}
+
+.slide-box img{
+    width: 100%;
+
+}
+
+.nextbutton {
+    position: absolute;
+    top: 100%;
+    right: 0;
+  }
+  
+
